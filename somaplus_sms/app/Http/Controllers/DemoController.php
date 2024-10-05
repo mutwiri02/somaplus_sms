@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\BookDemo;
 use App\Mail\DemoBooked;
 use App\Models\Booking;
 use Illuminate\Http\Request;
@@ -70,8 +71,11 @@ class DemoController extends Controller
              $booking->message=$data['message'];
              $booking->selected_datetime=$data['selected_datetime'];
              $booking->save();
+        $data = $booking;
 
-             Mail::to($booking ->email)->send(new DemoBooked($booking));
+            Mail::to('mutwiric00@gmail.com')->send(new BookDemo
+        ($data));
+
 
 
              return redirect()->route('book-demo')->with('success', 'Your demo has been booked successfully');

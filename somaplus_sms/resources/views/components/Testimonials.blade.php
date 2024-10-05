@@ -88,12 +88,13 @@
 </script> --}}
 <div class="bg-gradient-to-b from-purple-800 to-violet-400 text-white py-16">
     <div class="container mx-auto px-4">
-        <h1 class="text-4xl font-bold mb-4">Schools <span class="font-normal">Love</span> SomaPlus</h1>
+        <h1 class="text-4xl font-bold mb-4">Schools <span class="font-normal text-indigo-900">Love</span> SomaPlus</h1>
 
         <div class="flex flex-wrap items-center">
             <div class="w-full lg:w-1/2 mb-8 lg:mb-0">
                 <p class="text-xl mb-8">
-                    SomaPlus helps schools get things done efficiently. Don't take our word for it, hear it directly from them.
+                    SomaPlus helps schools get things done efficiently. Don't take our word for it, hear it directly
+                    from them.
                 </p>
 
                 <div class="flex justify-center space-x-4 mb-8">
@@ -117,7 +118,10 @@
                 <div class="owl-carousel owl-theme">
                     <div class="testimonial-item">
                         <blockquote class="text-lg mb-6">
-                            "SomaPlus offers a well-priced product backed by stellar customer service and product innovation. As a smaller school, SomaPlus met our needs for an SMS, and consistently meets our needs for continuous product and service improvement. Always innovating, we appreciate the care and support they have for their customers. We couldn't ask for a better partner."
+                            "SomaPlus offers a well-priced product backed by stellar customer service and product
+                            innovation. As a smaller school, SomaPlus met our needs for an SMS, and consistently meets
+                            our needs for continuous product and service improvement. Always innovating, we appreciate
+                            the care and support they have for their customers. We couldn't ask for a better partner."
                         </blockquote>
 
                         <div class="flex items-center">
@@ -141,4 +145,3 @@
         </div>
     </div>
 </div>
-

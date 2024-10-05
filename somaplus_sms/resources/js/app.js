@@ -39,3 +39,7 @@
     yearlyBtn.classList.remove('bg-white', 'shadow');
     updatePrices(monthlyPrices);
   });
+
+
+
+  

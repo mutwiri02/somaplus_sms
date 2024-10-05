@@ -5,13 +5,25 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BookingController;
 use App\Http\Controllers\DemoController;
 use App\Http\Controllers\featuresController;
+use App\Http\Controllers\homeContoller;
+use App\Http\Controllers\homeController;
 
-Route::get('/', function () {
-    $schoolTrustController = new SchoolTrustController();
-    $schoolsData = $schoolTrustController->index();
+// Route::get('/', function () {
+//   //   $schoolTrustController = new SchoolTrustController();
+//   //   $schoolsData = $schoolTrustController->index();
+//   // $featuresData = new featuresController;
+//   // $featuresData = $featuresData->index();
+//   // return view('welcome', compact('schoolsData','featuresData'));
                 
-    return view('welcome', ['schoolsData' => $schoolsData]);
-})->name('welcome');
+//   //   // return view('welcome', ['schoolsData' => $schoolsData],
+
+
+  
+// })->name('welcome');
+
+ Route::get('/', [homeController::class, 'index'])->name('welcome');
+
+
 
 // Route::get('/features' ,function(){
 //   return view('features');

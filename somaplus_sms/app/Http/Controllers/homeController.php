@@ -2,21 +2,19 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\features;
 use Illuminate\Http\Request;
+use App\Http\Controllers\featuresController;
+use App\Http\Controllers\SchoolTrustController;
 
-class featuresController extends Controller
+class homeController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
-    public function index()
+    //
+     public function index(SchoolTrustController $schoolTrustController)
     {
-        // $features= features::all();
-        return view('features.newFeature');
-    }
- public function allFeatures(){
-    $features = [
+         // Get school data from SchoolTrustController
+    $schoolsData = $schoolTrustController->index();
+
+ $features = [
         [
             'title' => 'User Management',
             'description' => 'Manage all user accounts, including students, teachers, and administrators. Features include account creation, role assignment, and permission settings.',
@@ -117,75 +115,9 @@ class featuresController extends Controller
             'description' => 'Monitor student health records, including vaccinations, medical history, and wellness checks. Integrate with school nurse services and track incidents.',
             'icon' => '🏥',
         ],
-    ];
+    ]; // Get the features array from the response
     
-//         if ($request->has('view') && $request->view == 'welcome') {
-//     return view('welcome', compact('features'));
-// }
-    // $features= features::all();
-return view('features',  compact('features'));   
-     // return view('welcome', compact('features')->paginate(5));
- }
-    /**
-     * Show the form for creating a new resource.
-     */
-    public function create()
-    {
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     */
-    // public function store(Request $request)
-    // {
-    //     //
-    //     $features=$request->validate(
-    //         [
-    //             'title'=>'required',
-    //             'description'=>'required',
-    //             'icon'=>'required',
-
-    //         ]
-    //         );
-    //         $features= new features;
-    //         $features->title=$request->title;
-    //         $features->description=$request->description;
-    //         $features->icon=$request->icon;
-    //         $features->save();
-            
-    //         return redirect()->back()->with('success','features created successfully');
-
-    // }
-
-    /**
-     * Display the specified resource.
-     */
-    public function show(string $id)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(string $id)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, string $id)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(string $id)
-    {
-        //
+    // Return the view and pass both $schoolsData and $features
+    return view('welcome', compact('schoolsData', 'features'));
     }
 }

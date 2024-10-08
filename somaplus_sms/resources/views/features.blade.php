@@ -64,7 +64,7 @@
             Find out if our system works for your school
         </h1>
         <p class="underline">
-            <a href="#" class="flex items-center justify-center hover:text-purple-600 transition duration-300">
+            <a href="/contact" class="flex items-center justify-center hover:text-purple-600 transition duration-300">
                 Talk to one of our experts <i class="fa-solid fa-arrow-right ml-2"></i>
             </a>
         </p>

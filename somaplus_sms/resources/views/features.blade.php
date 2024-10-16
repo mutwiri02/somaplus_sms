@@ -13,7 +13,7 @@
             </p>
             <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 mt-8">
                 <button class="bg-blue-900 text-white px-6 py-2 rounded-md hover:bg-blue-800 transition duration-300">
-                    Start Your Free Trial
+                    Start Free Trial
                 </button>
                 <button
                     class="border border-blue-900 text-blue-900 px-6 py-2 rounded-md hover:bg-blue-100 transition duration-300">
